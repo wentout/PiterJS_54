@@ -1,0 +1,173 @@
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>Functions</h1>
+
+<h1 className="borderline">1</h1>
+
+-----
+
+# Singleton Wrapper
+
+```javascript className=codehugeshift
+
+const SingletonWrapper = function () { };
+
+SingletonWrapper.prototype =
+			Object.create( process ); // ← !
+
+SingletonWrapper.prototype
+	.constructor = SingletonWrapper;
+
+const instance = new SingletonWrapper;
+
+```
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>Classes</h1>
+
+<h1 className="borderline">2</h1>
+
+
+-----
+
+# Simple Class
+
+```javascript className=codehugeshift
+
+class TheClass {};
+
+debugger;
+
+const instance = new TheClass;
+
+debugger;
+
+```
+
+-----
+
+# Extended Class
+
+```javascript className=codehugeshift
+
+const BaseClass {};
+
+class TheClass extends BaseClass{};
+
+debugger;
+
+const instance = new TheClass;
+
+debugger;
+
+```
+
+-----
+
+# Monotonic Wrapper → Class
+
+```javascript className=codehugeshift
+
+const MonotonicWrapper = function () { };
+
+MonotonicWrapper.prototype.somValue = 123;
+
+class MyClass extends MonotonicWrapper { };
+
+const instance = new MyClass;
+
+debugger;
+
+```
+
+-----
+
+# intricacies : Function prototype
+
+```javascript className=codehugeshift
+
+Function.prototype
+// or
+function.prototype
+// or
+Object.getPrototypeOf(function)
+
+```
+
+-----
+
+# intricacies Primitives Types or Primitive Values
+
+```javascript className=codehugeshift
+
+// primitive type
+const primitiveValue = 5;
+// primitive value
+const myNumber = new Number(5);
+myNumber.valueOf();
+// or Symbol.toPrimitive
+
+```
+
+-----
+
+# intricacies Primitives Types or Primitive Values
+
+```javascript className=codehugeshift
+
+const vectorObj = new Number(5);
+
+const proxyAsNumber = new Proxy(vectorObj, {
+	get (target, prop) {
+		if (prop === Symbol.toPrimitive) {
+			return function (...args) {
+				return vectorObj.valueOf();
+			}
+		}
+		return target.valueOf();
+	}
+});
+
+```
+
+-----
+
+# intricacies Primitives Types or Primitive Values
+
+```javascript className=codehugeshift
+
+const a = new Number(100);
+a.subtract = function (b) {
+	return this.valueOf() - b;
+};
+console.log(a.subtract(10));	// 90
+console.log(a - 10);		// 90
+console.log(a - 10); 		// 90
+console.log(a - 10); 		// guess
+
+```
+
+-----
+
+# intricacies : super() is a call !
+
+```javascript className=codehugeshift
+
+// huge example
+
+
+
+```
+
+
+-----
+
+# What Proto Emulation Is ?
+
+```javascript className=codehugeshift
+
+// huge example
+
+```
