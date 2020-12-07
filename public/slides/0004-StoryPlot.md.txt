@@ -1,0 +1,79 @@
+
+# ... with thinking ...
+
+<h1 className="borderline">-1</h1>
+
+
+-----
+
+# I just like this two slides
+
+<center>
+
+# may be except of doing this
+</center>
+
+
+
+<Box>
+<center>
+<img src="./content/img/poly_red.svg"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+
+-----
+
+# I just like this two slides
+
+<center>
+
+# let we start doing that ?
+</center>
+
+
+<Box>
+<center>
+<img src="./content/img/poly_struct.svg"  style={{width: '70vw'}} />
+</center>
+</Box>
+
+
+
+-----
+
+<Box sx={{marginTop: '35vh'}}>
+<center>
+<h1 style={{fontSize: '11vh', color: 'cyan'}}>... with thinking ...</h1>
+</center>
+</Box>
+
+
+-----
+
+-----
+
+# IMO : the sort of thinking JavaScript is designed for
+
+```javascript className=codegiantshift
+
+with ( [ 2, 5 ] ) {
+	console.log(
+		Math.pow(
+			... reverse ()
+		)
+	);		// 25
+}
+
+```
+
+-----
+
+# MDN statements : with
+
+<Box sx={{textAlign: 'center'}}>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/with">
+<img src="./content/img/withMDN.png" style={{marginTop: '2vh', width: '75vw'}} />
+</a>
+</Box>
+

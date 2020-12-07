@@ -1,0 +1,112 @@
+
+-----
+
+-----
+
+<h1 style={{fontSize:'25vh', color: 'orange'}}>Thank You</h1>
+
+<h1 className="borderline">ø</h1>
+
+
+-----
+
+<Box sx={{marginTop: '10vh'}}>
+<center>
+<h1 style={{color:'orange'}}>fin</h1>
+
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+<h1 style={{fontSize:'20vh'}}>  → </h1>
+
+
+</center>
+</Box>
+
+-----
+
+-----
+
+
+<Box sx={{marginTop: '10vh'}}>
+<center>
+
+# the team !
+
+<img src="./content/img/team.jpg" style={{width: '55vw'}} />
+
+</center>
+</Box>
+
+
+-----
+
+
+<Box sx={{marginTop: '10vh'}}>
+<center>
+
+<h1 style={{fontSize: '11vh', color:'orange'}}>links</h1>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+# https://twitter.com/went_out
+
+<br/>
+
+# https://github.com/wentout/mnemonica
+
+<br/>
+
+# https://github.com/wentout/PiteJS_54
+
+
+</center>
+</Box>
+
+
+
+-----
+
+
+-----
+
+
+-----
+
+
+
+<Box sx={{marginTop: '10vh'}}>
+<center>
+<h1 style={{color:'orange'}}>where you can peer at</h1>
+
+<a href="https://www.npmjs.com/package/mnemonica">
+<img src="./content/img/mnemonica.png" style={{width: '55vw'}} />
+</a>
+
+</center>
+</Box>
+
+-----
+
+<Box sx={{marginTop: '10vh'}}>
+<center>
+<h1 style={{color:'orange'}}>Why Mnemonica?</h1>
+
+<img src="./content/img/mnemonica_book.jpg" style={{width: '55vw'}} />
+
+</center>
+</Box>
+
+-----
+
+-----
+
+
+

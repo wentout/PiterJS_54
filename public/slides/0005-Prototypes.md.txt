@@ -1,0 +1,77 @@
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>... intro ...</h1>
+
+<h1 className="borderline">0</h1>
+
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '7vh', color: 'green'}}>if you look at the code</h1>
+</center>
+</Box>
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+<h1 style={{fontSize: '7vh', color: 'green'}}>if you look at the code</h1>
+<h1 style={{fontSize: '8vh', color: 'orange'}}>for a long time</h1>
+</center>
+</Box>
+
+-----
+
+<Box sx={{marginTop: '25vh'}}>
+<center>
+	<h1 style={{fontSize: '7vh', color: 'green'}}>if you look at the code</h1>
+	<h1 style={{fontSize: '8vh', color: 'orange'}}>for a long time</h1>
+	<h1 style={{fontSize: '9vh'}}>then the code starts to peer at you</h1>
+</center>
+</Box>
+
+-----
+
+# Early Beginning Simpliest Prototypes Example
+
+```javascript className=codehugeshift
+// back to the 1995
+var TheConstructor = function () {
+	this;
+	debugger;
+};
+
+var instance = new TheConstructor;
+// we can see constructor definition
+// made like this
+```
+
+-----
+
+<Box sx={{marginTop: '25vh', marginLeft: '15vw', fontFamily: 'Courier', fontSize:'3vh'}}>
+	Let us remember, it was: December 4, 1995<br/>
+	<br/>
+	The More Developed languages had Class Based Ineritance<br/>
+	But prototypes are way more simplier pattern.<br/>
+	Just put something to the Constructors.prototype.<br/>
+	And that is it -- it would be inherited.<br/>
+	<br/>
+		-- What for?
+</Box>
+
+-----
+[{"snowflakes":true}]
+
+<Box sx={{marginTop: '25vh', marginLeft: '15vw', fontFamily: 'Courier', fontSize:'3vh'}}>
+	Let us remember, it was: December 4, 1995<br/>
+	<br/>
+	The More Developed languages had Class Based Ineritance<br/>
+	But prototypes are way more simplier pattern.<br/>
+	Just put something to the Constructors.prototype.<br/>
+	And that is it -- it would be inherited.<br/>
+	<br/>
+		-- What for? Snowflakes, for sure!<br/>
+</Box>

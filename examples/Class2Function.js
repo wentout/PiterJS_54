@@ -35,6 +35,7 @@ const NextFn = function () {
 };
 
 const ExtendedFn = function () {
+	// 'use strict';
 	console.log(3, arguments.callee.name);
 	supervise(this, arguments);
 	this.super = 2;
