@@ -1,8 +1,8 @@
 const ogp = Object.getPrototypeOf;
 const osp = Object.setPrototypeOf;
 
-const supervise = (instance, args) => {
-	const seek4name = args.callee.name;
+const supervise = (instance, arguments) => {
+	const seek4name = arguments.callee.name;
 	let current = instance;
 	do {
 		if (current === null) {
@@ -16,7 +16,7 @@ const supervise = (instance, args) => {
 	} while (true);
 	const Super = ogp(current.constructor);
 	if (Super instanceof Function) {
-		Super.call(instance, ...args);
+		Super.call(instance, ...arguments);
 	}
 };
 
@@ -35,7 +35,6 @@ const NextFn = function () {
 };
 
 const ExtendedFn = function () {
-	'use strict';
 	console.log(3, arguments.callee.name);
 	supervise(this, arguments);
 	this.super = 2;
