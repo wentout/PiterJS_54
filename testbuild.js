@@ -1,5 +1,5 @@
 const port = 3001;
-const path = '/PiterJS.54';
+const path = '/PiterJS_54';
 
 console.log('port', port);
 console.log('path', path);
