@@ -57,12 +57,12 @@
 
 ```javascript className=codegiantshift
 
-with ( 0 ) {
+with ( [ 2, 5 ] ) {
 	console.log(
 		Math.pow(
-			valueOf(), valueOf()
+			... reverse ()
 		)
-	);		// 1
+	);		// 25
 }
 
 ```

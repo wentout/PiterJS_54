@@ -72,7 +72,7 @@ debugger;
 
 const MonotonicWrapper = function () { };
 
-MonotonicWrapper.prototype.somValue = 123;
+MonotonicWrapper.prototype.someValue = 123;
 
 class MyClass extends MonotonicWrapper { };
 
@@ -86,39 +86,56 @@ debugger;
 
 # intricacies : Function prototype
 
-```javascript className=codehugeshift
+```javascript className=codegiantshift
 
 Function.prototype
 // or
 function.prototype
+
+// OR ???
+// ...
+```
+
+-----
+
+# intricacies : Function prototype
+
+```javascript className=codegiantshift
+
+Function.prototype
 // or
+function.prototype
+
+// OR ???
 Object.getPrototypeOf(function)
 
 ```
 
 -----
 
-# intricacies Primitives Types or Primitive Values
+# intricacies : Primitives Types or Primitive Values
 
 ```javascript className=codehugeshift
 
 // primitive type
+
 const primitiveValue = 5;
+
 // primitive value
 const myNumber = new Number(5);
 myNumber.valueOf();
-// or Symbol.toPrimitive
+
+// && valueOf or Symbol.toPrimitive ?
 
 ```
 
 -----
 
-# intricacies Primitives Types or Primitive Values
+# intricacies : Primitives Types or Primitive Values
 
-```javascript className=codehugeshift
+```javascript className=codemediumshift
 
 const vectorObj = new Number(5);
-
 const proxyAsNumber = new Proxy(vectorObj, {
 	get (target, prop) {
 		if (prop === Symbol.toPrimitive) {
@@ -134,7 +151,7 @@ const proxyAsNumber = new Proxy(vectorObj, {
 
 -----
 
-# intricacies Primitives Types or Primitive Values
+# intricacies : Primitives Types or Primitive Values
 
 ```javascript className=codehugeshift
 
@@ -143,11 +160,83 @@ a.subtract = function (b) {
 	return this.valueOf() - b;
 };
 console.log(a.subtract(10));	// 90
-console.log(a - 10);		// 90
-console.log(a - 10); 		// 90
-console.log(a - 10); 		// guess
+
+console.log(a - 10);			// 90
+console.log(a - 10); 			// 90
+console.log(a - 10); 			// guess
 
 ```
+
+-----
+
+# intricacies : Primitives Types or Primitive Values
+
+```javascript className=codehugeshift
+
+const a = new Number(100);
+a.subtract = function (b) {
+	return this.valueOf() - b;
+};
+a[Symbol.toPrimitive] = () => {
+	throw new Error('418: use subtract !');
+}
+console.log(a.subtract(10));	// 90
+console.log(a - 10);			// Error
+
+```
+
+-----
+
+# intricacies : Primitives Types or Primitive Values
+
+```javascript className=codegiantshift
+
+with ( 0 ) {
+	console.log(
+		Math.pow(
+			valueOf(), valueOf()
+		)
+	);		// 1
+}
+
+```
+
+-----
+
+# However Object's root with example is nice
+
+```javascript className=codegiantshift
+
+with ( Object ) {
+	console.log(
+		getPrototypeOf(
+			create( null )
+		)
+	);		// null
+}
+
+```
+
+-----
+
+# What Proto Emulation Is ?
+
+```javascript className=codemedium
+
+const Base = function () { };
+class User extends Base { }
+
+Reflect.setPrototypeOf(Base.prototype, 
+	new Proxy(User.prototype, {
+		get (target, propName, receiver) {
+			return Reflect
+				.get( target, propName, receiver ) ||
+						undefined;
+	}
+}));
+
+```
+
 
 -----
 
@@ -158,16 +247,5 @@ console.log(a - 10); 		// guess
 // huge example
 
 
-
-```
-
-
------
-
-# What Proto Emulation Is ?
-
-```javascript className=codehugeshift
-
-// huge example
 
 ```
