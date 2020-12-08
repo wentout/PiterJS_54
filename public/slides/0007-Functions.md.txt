@@ -1,0 +1,43 @@
+
+-----
+
+<h1 style={{fontSize:'15vh', color: 'orange'}}>Functions</h1>
+
+<h1 className="borderline">2</h1>
+
+-----
+
+# Singleton Wrapper
+
+```javascript className=codehugeshift
+
+const SingletonWrapper = function () { };
+
+SingletonWrapper.prototype =
+			Object.create( process ); // ← !
+
+SingletonWrapper.prototype
+	.constructor = SingletonWrapper;
+
+const instance = new SingletonWrapper;
+
+```
+
+
+-----
+
+# Monotonic Wrapper → Class
+
+```javascript className=codehugeshift
+
+const MonotonicWrapper = function () { };
+
+MonotonicWrapper.prototype.someValue = 123;
+
+class MyClass extends MonotonicWrapper { };
+
+// reference MonotonicWrapper.prototype
+const instance1 = new MyClass;
+const instance2 = new MyClass;
+
+```
