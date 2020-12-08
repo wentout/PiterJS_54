@@ -10,5 +10,11 @@
 -----
 
 <Box sx={{textAlign: 'center'}}>
-<img src="./content/RND.JS.png" style={{marginTop: '2vh', width: '45vw'}} />
+<img src="./content/img/Node.js.SPb.jpg" style={{marginTop: '5vh', width: '45vw'}} />
+</Box>
+
+-----
+
+<Box sx={{textAlign: 'center'}}>
+<img src="./content/RND.JS.png" style={{marginTop: '2vh', width: '49vw'}} />
 </Box>
