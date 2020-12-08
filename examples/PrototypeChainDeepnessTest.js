@@ -1,6 +1,6 @@
 'use strict';
 
-const MAX_NUM = 10000;
+const MAX_NUM = 1000;
 
 global.m = [];
 
@@ -18,8 +18,10 @@ const review = () => {
 const makeNextEl = function (pointer) {
 	const name = `idx_${ global.m.length }`;
 	const el = {
+		get [name] () {
+			return el;
+		},
 		name,
-		[name]: name,
 		parent: pointer,
 		get self () {
 			return el;
@@ -30,9 +32,9 @@ const makeNextEl = function (pointer) {
 	global.m.push(el);
 	if (global.m.length < MAX_NUM) {
 		console.log(global.m.length, name, (Date.now() - global.start) / 1000);
-		// setTimeout(() => {
+		process.nextTick(() => {
 			makeNextEl(el);
-		// }, 0);
+		}, 0);
 		return;
 	}
 	review();
