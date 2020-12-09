@@ -18,3 +18,5 @@ class Extended extends Base {
 }
 
 new Extended();
+
+debugger;

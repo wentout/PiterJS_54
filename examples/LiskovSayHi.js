@@ -87,3 +87,5 @@ var next = new NextConstructor;
 Object.setPrototypeOf(NextConstructor.prototype, root);
 
 console.log(next.extract('sayHi'));
+
+debugger;

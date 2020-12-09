@@ -41,3 +41,5 @@ const makeNextEl = function (pointer) {
 };
 
 makeNextEl(global.current);
+
+debugger;

@@ -7,6 +7,7 @@ const arr = new Array(1, 2, 3);
 const example = {};
 
 console.log(ogp(arr));					// Object(0) []
+
 console.log(ogp(ogp(arr)));				// [Object: null prototype] {}
 
 Object.setPrototypeOf(example, arr);

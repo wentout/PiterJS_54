@@ -34,3 +34,5 @@ const forked = new instance.fork();
 console.log(instance === forked);			// false
 console.log(instance instanceof Forkable);	// true
 console.log(forked instanceof Forkable);	// true
+
+debugger;

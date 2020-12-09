@@ -27,4 +27,5 @@ try {
 	console.error(error);
 }
 console.log('' + proxyAsNumber);		// 5
+
 debugger;

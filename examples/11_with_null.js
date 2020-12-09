@@ -9,3 +9,5 @@ with (Object) {
 	);      // null
 
 }
+
+debugger;
