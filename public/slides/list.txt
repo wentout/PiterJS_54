@@ -1,10 +1,10 @@
 0000.json 0
 0001.json 1
-0002.md.txt 2
+0002.md.txt 3
 0003.json 2
 0004-StoryPlot.md.txt 6
-0005-Prototypes.md.txt 7
+0005-Prototypes.md.txt 8
 0006-Classes.md.txt 3
 0007-Functions.md.txt 3
-0009-Intricacies.md.txt 11
+0009-Intricacies.md.txt 12
 0010.md.txt 12

@@ -21,13 +21,15 @@ const supervise = (instance, arguments) => {
 };
 
 const Base = function () {
+	debugger;
+	console.log(5, arguments.callee.name);
 	supervise(this, arguments);
 	this.base = true;
 	this.super = 0;
-	console.log(5, arguments.callee.name);
 };
 
 const NextFn = function () {
+	debugger;
 	console.log(4, arguments.callee.name);
 	supervise(this, arguments);
 	this.super = 1;
@@ -35,6 +37,7 @@ const NextFn = function () {
 };
 
 const ExtendedFn = function () {
+	debugger;
 	// 'use strict';
 	console.log(3, arguments.callee.name);
 	supervise(this, arguments);
@@ -97,3 +100,5 @@ console.log('ForExtending → InTheMiddle', Reflect.getPrototypeOf(InTheMiddle) 
 console.log('ForExtending → InTheMiddle', Reflect.getPrototypeOf(InTheMiddle.prototype) === ForExtending.prototype); // true
 console.log('InTheMiddle → Some', Reflect.getPrototypeOf(Some) === InTheMiddle); // true
 console.log('InTheMiddle → Some', Reflect.getPrototypeOf(Some.prototype) === InTheMiddle.prototype); // true
+
+debugger;

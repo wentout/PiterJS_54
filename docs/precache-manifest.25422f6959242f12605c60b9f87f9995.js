@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0b79c9f949eae2625ed01a35925fc58e",
+    "revision": "116751913e66a6b6c060525b4d978b32",
     "url": "/PiterJS_54/index.html"
   },
   {

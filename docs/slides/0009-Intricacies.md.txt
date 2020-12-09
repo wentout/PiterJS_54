@@ -142,21 +142,38 @@ with ( Object ) {
 
 -----
 
-# What Proto Emulation Is ?
+# Numbers → Array → Object : Complicated Chains
 
-```javascript className=codemedium
+<Box sx={{marginLeft:'10vw', marginTop:'10vh'}}>
 
-const Base = function () { };
-class User extends Base { }
+* # define Array, define Number, define Object
+* # inherit them from each other
+* # show instanceof
+* # show valueOf
+* # examine other things
 
-Reflect.setPrototypeOf(Base.prototype, 
-	new Proxy(User.prototype, {
-		get (target, propName, receiver) {
-			return Reflect
-				.get( target, propName, receiver ) ||
-						undefined;
+</Box>
+	
+
+-----
+
+# How to emulate Prototype Chain ?
+
+```javascript className=codesmall
+const PrototypeChain = [{a:1}, {b:2}, {c:3}];
+const myObject = {};
+const accessorProxy = new Proxy(myObject, {
+	get (target, prop, receiver) {
+		let result;
+		PrototypeChain.reverse().forEach(current => {
+			if (result === undefined) {
+				result = Reflect.get(current, prop);
+			}
+		});
+		return result;
 	}
-}));
+});
+Reflect.setPrototypeOf(myObject, accessorProxy);
 
 ```
 
@@ -180,3 +197,16 @@ class SomeClass {
 }
 
 ```
+
+-----
+
+# intricacies : super() is a call !
+
+<Box sx={{marginLeft:'10vw', marginTop:'10vh'}}>
+
+* # define at least 3 class extends
+* # define at least 3 functions 4 extention
+* # mix them all and review the result
+
+</Box>
+

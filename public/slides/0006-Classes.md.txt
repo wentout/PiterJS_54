@@ -29,7 +29,7 @@ debugger;
 
 ```javascript className=codehugeshift
 
-const BaseClass {};
+class BaseClass {};
 
 class TheClass extends BaseClass{};
 

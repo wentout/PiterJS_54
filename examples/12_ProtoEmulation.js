@@ -28,3 +28,4 @@ console.log('myObject.real   : ', myObject.real);
 console.log('myObject.latest : ', myObject.latest);
 console.log('myObject.middle : ', myObject.middle);
 console.log('myObject.parent : ', myObject.parent);
+debugger;

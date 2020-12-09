@@ -1,9 +1,12 @@
 
-class BaseClass { };
-debugger;
+// prototype introspection
 
-class TheClass extends BaseClass { };
+class BaseClass {};
+
+class TheClass extends BaseClass{};
+
 debugger;
 
 const instance = new TheClass;
+
 debugger;

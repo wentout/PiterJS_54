@@ -5,9 +5,9 @@ const vectorObj = new Number(5);
 const proxyAsNumber = new Proxy(vectorObj, {
 	get (target, prop) {
 		if (prop === Symbol.toPrimitive) {
-			return function (...args) {
+			return function (type) {
 				// this -- proxy itself
-				// args === ['default']
+				// type === 'default'
 				// console.log('THIS', this === vectorObj, args);
 				return vectorObj.valueOf();
 			}
@@ -26,3 +26,5 @@ try {
 } catch (error) {
 	console.error(error);
 }
+console.log('' + proxyAsNumber);		// 5
+debugger;
