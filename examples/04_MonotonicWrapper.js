@@ -23,6 +23,22 @@ console.log(instance2.someValue);
 
 debugger;
 
+instance1.someValue = 321;
+
+console.log(instance1.someValue);
+console.log(instance2.someValue);
+
+debugger;
+
+console.log(
+
+	Object.getPrototypeOf // !!!
+
+		(instance1.someValue)
+);
+
+debugger;
+
 console.log(instance1.anotherValue);
 console.log(instance2.anotherValue);
 
