@@ -208,6 +208,13 @@ progress {
   margin: 0;
 }
 
+.SlideContent button {
+  position: absolute;
+  background-color: red;
+  top: 5vh;
+  left: 93vw;
+} 
+
 .Slide .codegiantshift {
   font-size: 7vh !important;
   padding: 0.1vh 0 0 9vw;

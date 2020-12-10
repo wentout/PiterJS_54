@@ -1,4 +1,6 @@
 
+debugger;
+
 const a = new Number(100);
 
 a.subtract = function (b) {

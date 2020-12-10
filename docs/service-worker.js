@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/PiterJS_54/precache-manifest.25422f6959242f12605c60b9f87f9995.js"
+  "/PiterJS_54/precache-manifest.243d402c9557a36e6e0be6ff4de2926c.js"
 );
 
 self.addEventListener('message', (event) => {

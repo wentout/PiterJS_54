@@ -23,6 +23,8 @@ debugger;
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/02_01_SimpleClass')}}>Run Me</Button>
+
 -----
 
 # Extended Class
@@ -40,4 +42,6 @@ const instance = new TheClass;
 debugger;
 
 ```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/02_02_ExtendedClass')}}>Run Me</Button>
 

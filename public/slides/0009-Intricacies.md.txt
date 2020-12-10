@@ -34,6 +34,8 @@ Object.getPrototypeOf(function)
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/05_intricaciesFnProto')}}>Run Me</Button>
+
 -----
 
 # intricacies : Primitives Types or Primitive Values
@@ -51,6 +53,8 @@ myNumber.valueOf();
 // && valueOf or Symbol.toPrimitive ?
 
 ```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/06_NumberTypeValue')}}>Run Me</Button>
 
 -----
 
@@ -72,6 +76,8 @@ const proxyAsNumber = new Proxy(vectorObj, {
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/07_NumberProxy')}}>Run Me</Button>
+
 -----
 
 # intricacies : Primitives Types or Primitive Values
@@ -89,6 +95,8 @@ console.log(a - 10); 			// 90
 console.log(a - 10); 			// guess
 
 ```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/08_NumberFieldProfit')}}>Run Me</Button>
 
 -----
 
@@ -108,6 +116,8 @@ console.log(a - 10);			// Error
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/09_NumberBinaryError')}}>Run Me</Button>
+
 -----
 
 # intricacies : Primitives Types or Primitive Values
@@ -123,6 +133,8 @@ with ( 0 ) {
 }
 
 ```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/10_with_0')}}>Run Me</Button>
 
 -----
 
@@ -140,6 +152,8 @@ with ( Object ) {
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/11_with_null')}}>Run Me</Button>
+
 -----
 
 # Numbers → Array → Object : Complicated Chains
@@ -153,7 +167,8 @@ with ( Object ) {
 * # examine other things
 
 </Box>
-	
+
+<Button onClick={() => { fetch('http://localhost:3001/example/NumbersIncrementalComputation')}}>Run Me</Button>
 
 -----
 
@@ -177,6 +192,7 @@ Reflect.setPrototypeOf(myObject, accessorProxy);
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/12_ProtoEmulation')}}>Run Me</Button>
 
 -----
 
@@ -210,3 +226,4 @@ class SomeClass {
 
 </Box>
 
+<Button onClick={() => { fetch('http://localhost:3001/example/Class2Function')}}>Run Me</Button>

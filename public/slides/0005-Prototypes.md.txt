@@ -49,6 +49,8 @@ var instance = new TheConstructor;
 // made like this
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/01_1995')}}>Run Me</Button>
+
 -----
 # that frightening picture
 
@@ -90,3 +92,21 @@ Unlike most class-based object languages, properties can be added to objects dyn
 	<br/>
 		-- What for? Snowflakes, for sure!<br/>
 </Box>
+
+-----
+
+# How Deep Prototype Chain Is ?
+
+<Box>
+<center>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain">
+<img src="./content/img/PrototypeChain.png"  style={{width: '70vw'}} />
+</a>
+</center>
+</Box>
+
+<Button onClick={() => { fetch('http://localhost:3001/example/PrototypeChainDeepnessTest')}}>Run Me</Button>
+
+-----
+
+

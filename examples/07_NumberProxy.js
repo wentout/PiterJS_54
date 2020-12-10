@@ -1,5 +1,7 @@
 'use strict';
 
+debugger;
+
 const vectorObj = new Number(5);
 
 const proxyAsNumber = new Proxy(vectorObj, {
@@ -26,6 +28,34 @@ try {
 } catch (error) {
 	console.error(error);
 }
-console.log('' + proxyAsNumber);		// 5
+
+console.log('proxy as a number: ' + proxyAsNumber);		// 5
+
+debugger;
+
+const whySymbolToPrimitive = {};
+
+console.log(' look ! → ', 0 + whySymbolToPrimitive);
+
+Object.setPrototypeOf(whySymbolToPrimitive, vectorObj);
+
+try {
+	whySymbolToPrimitive.valueOf();
+} catch (error) {
+	debugger;
+	console.error(error);
+}
+
+debugger;
+
+whySymbolToPrimitive[Symbol.toPrimitive] = function () {
+	debugger;
+	const toBeNumber = Object.getPrototypeOf(this);
+	return toBeNumber.valueOf();
+};
+
+debugger;
+
+console.log(0 + whySymbolToPrimitive);
 
 debugger;

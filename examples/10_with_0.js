@@ -1,3 +1,6 @@
+
+debugger;
+
 with (0) {
 
 	console.log(

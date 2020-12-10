@@ -1,5 +1,7 @@
 'use strict';
 
+debugger;
+
 console.log('\n --- constructor features --- \n');
 
 const MyFn = function () { };

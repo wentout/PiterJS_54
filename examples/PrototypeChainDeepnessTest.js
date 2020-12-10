@@ -1,5 +1,7 @@
 'use strict';
 
+debugger;
+
 const MAX_NUM = 1000;
 
 global.m = [];

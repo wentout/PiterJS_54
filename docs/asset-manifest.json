@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/PiterJS_54/static/css/main.30e57c35.chunk.css",
-    "main.js": "/PiterJS_54/static/js/main.a8eb1414.chunk.js",
-    "main.js.map": "/PiterJS_54/static/js/main.a8eb1414.chunk.js.map",
+    "main.css": "/PiterJS_54/static/css/main.8b5f9391.chunk.css",
+    "main.js": "/PiterJS_54/static/js/main.6e916902.chunk.js",
+    "main.js.map": "/PiterJS_54/static/js/main.6e916902.chunk.js.map",
     "runtime-main.js": "/PiterJS_54/static/js/runtime-main.41f69265.js",
     "runtime-main.js.map": "/PiterJS_54/static/js/runtime-main.41f69265.js.map",
-    "static/js/2.1594faef.chunk.js": "/PiterJS_54/static/js/2.1594faef.chunk.js",
-    "static/js/2.1594faef.chunk.js.map": "/PiterJS_54/static/js/2.1594faef.chunk.js.map",
+    "static/js/2.daa39ed1.chunk.js": "/PiterJS_54/static/js/2.daa39ed1.chunk.js",
+    "static/js/2.daa39ed1.chunk.js.map": "/PiterJS_54/static/js/2.daa39ed1.chunk.js.map",
     "index.html": "/PiterJS_54/index.html",
-    "precache-manifest.25422f6959242f12605c60b9f87f9995.js": "/PiterJS_54/precache-manifest.25422f6959242f12605c60b9f87f9995.js",
+    "precache-manifest.243d402c9557a36e6e0be6ff4de2926c.js": "/PiterJS_54/precache-manifest.243d402c9557a36e6e0be6ff4de2926c.js",
     "service-worker.js": "/PiterJS_54/service-worker.js",
-    "static/css/main.30e57c35.chunk.css.map": "/PiterJS_54/static/css/main.30e57c35.chunk.css.map",
-    "static/js/2.1594faef.chunk.js.LICENSE.txt": "/PiterJS_54/static/js/2.1594faef.chunk.js.LICENSE.txt"
+    "static/css/main.8b5f9391.chunk.css.map": "/PiterJS_54/static/css/main.8b5f9391.chunk.css.map",
+    "static/js/2.daa39ed1.chunk.js.LICENSE.txt": "/PiterJS_54/static/js/2.daa39ed1.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.41f69265.js",
-    "static/js/2.1594faef.chunk.js",
-    "static/css/main.30e57c35.chunk.css",
-    "static/js/main.a8eb1414.chunk.js"
+    "static/js/2.daa39ed1.chunk.js",
+    "static/css/main.8b5f9391.chunk.css",
+    "static/js/main.6e916902.chunk.js"
   ]
 }

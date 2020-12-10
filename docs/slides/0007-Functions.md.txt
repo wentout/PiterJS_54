@@ -23,6 +23,8 @@ const instance = new SingletonWrapper;
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/03_SingletonWrapper')}}>Run Me</Button>
+
 
 -----
 
@@ -41,3 +43,5 @@ const instance1 = new MyClass;
 const instance2 = new MyClass;
 
 ```
+
+<Button onClick={() => { fetch('http://localhost:3001/example/04_MonotonicWrapper')}}>Run Me</Button>

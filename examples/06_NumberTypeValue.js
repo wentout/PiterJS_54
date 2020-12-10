@@ -1,3 +1,5 @@
+debugger;
+
 // primitive type
 const primitiveValue = 5;
 

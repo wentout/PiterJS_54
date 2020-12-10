@@ -1,3 +1,6 @@
+
+debugger;
+
 const PrototypeChain = [{
 	parent: true
 }, {
@@ -9,6 +12,8 @@ const PrototypeChain = [{
 const myObject = {
 	real: true
 };
+
+debugger;
 
 const accessorProxy = new Proxy(myObject, {
 	get (target, prop, receiver) {
@@ -22,7 +27,11 @@ const accessorProxy = new Proxy(myObject, {
 	}
 });
 
+debugger;
+
 Reflect.setPrototypeOf(myObject, accessorProxy);
+
+debugger;
 
 console.log('myObject.real   : ', myObject.real);
 console.log('myObject.latest : ', myObject.latest);

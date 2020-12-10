@@ -2,10 +2,14 @@
 // we can see constructor definition
 // made like this
 
+debugger;
+
 var TheConstructor = function () {
 	this;
 	debugger;
 };
+
+debugger;
 
 var instance = new TheConstructor;
 

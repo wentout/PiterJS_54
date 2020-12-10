@@ -6,15 +6,13 @@ import Prism from '@theme-ui/prism';
 import Chart from './Chart';
 
 // import { Box, Heading, Donut, Container, Message, Embed, Link, Badge, Grid, AspectRatio } from 'theme-ui';
-import {Box, Heading} from 'theme-ui';
+import {Box, Heading, Button} from 'theme-ui';
 
 const SlideMDX = function () {
 	this.data = this.slides.current.data;
 };
 
 SlideMDX.prototype.View = function () {
-
-
 
 	const me = this;
 
@@ -45,6 +43,7 @@ SlideMDX.prototype.View = function () {
 		Box,
 		app,
 		Chart,
+		Button,
 	};
 
 	const scope = {

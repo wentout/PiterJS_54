@@ -1,4 +1,6 @@
 
+debugger;
+
 // test method is included
 // via prototype chain
 // of Extended .prototype

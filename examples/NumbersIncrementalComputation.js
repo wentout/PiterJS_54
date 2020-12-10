@@ -1,5 +1,7 @@
 'use strict';
 
+debugger;
+
 const ogp = Object.getPrototypeOf;
 
 const myNumber = new Number(5);

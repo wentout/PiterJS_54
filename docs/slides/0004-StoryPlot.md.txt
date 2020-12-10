@@ -67,6 +67,8 @@ with ( [ 2, 5 ] ) {
 
 ```
 
+<Button onClick={() => { fetch('http://localhost:3001/example/00_with')}}>Run Me</Button>
+
 -----
 
 # MDN statements : with

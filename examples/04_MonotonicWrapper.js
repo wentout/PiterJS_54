@@ -1,4 +1,6 @@
 
+debugger;
+
 const MonotonicWrapper = function () {
 	console.log('here', this);
 	console.log(this.constructor.name);

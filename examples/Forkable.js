@@ -1,4 +1,6 @@
 
+debugger;
+
 const Base = function () { };
 
 class User extends Base { }

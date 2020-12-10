@@ -1,3 +1,6 @@
+
+debugger;
+
 with (Object) {
 
 	console.log(
