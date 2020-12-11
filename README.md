@@ -31,7 +31,7 @@ node --inspect ./testbuild
 
 open instector tooling for localhost:9229, for example
 
-navigate your chrome to `chrome://flags`, or do this kind of things for your preferred debugger
+navigate your chrome to `chrome://inspect`, or do this kind of things for your preferred debugger
 
 ## 5. open the deck
 
