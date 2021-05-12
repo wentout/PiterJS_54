@@ -1,12 +1,11 @@
-import React from "react";
-import { Progress } from 'theme-ui';
+import React from 'react';
 import MDX from '@mdx-js/runtime';
 import mdx from '@mdx-js/mdx';
 import Prism from '@theme-ui/prism';
 
 import Chart from './Chart';
 
-import { Box, Heading, Donut, Container, Message, Embed, Link, Badge, Grid, AspectRatio } from 'theme-ui';
+import { Progress, Box, Heading } from 'theme-ui';
 
 const Mdx = function () {
 	this.data = this.slides.current.data;
@@ -25,17 +24,17 @@ Mdx.prototype.View = function () {
 	const jsx = mdx.sync(data);
 	
 	const app = function (proto) {
-		const key = proto.slide.key;
+		const {key} = proto.slide;
 		const split = key.split('.');
-		const data = split.reduce((answer, name) => {
-			answer = answer[name];
+		const appData = split.reduce((answer, fieldName) => {
+			answer = answer[fieldName];
 			return answer;
 		}, me);
-		return `${data}`;
+		return `${appData}`;
 	};
 
 	const components = {
-		code: Prism,
+		code : Prism,
 		Heading,
 		Box,
 		app,

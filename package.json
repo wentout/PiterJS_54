@@ -18,12 +18,15 @@
     "@theme-ui/presets": "^0.3.0",
     "@theme-ui/prism": "^0.3.0",
     "d3": "^5.15.0",
+    "eslint-plugin-mocha": "^8.1.0",
+    "eslint-plugin-no-arrow-this": "^1.2.0",
+    "eslint-plugin-react": "^7.23.2",
     "express": "^4.17.1",
     "magic-snowflakes": "^4.1.5",
     "mnemonica": "^0.9.89",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "^3.4.0",
+    "react-scripts": "^4.0.3",
     "theme-ui": "^0.3.1"
   },
   "devDependencies": {
@@ -32,6 +35,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "rm -r ./docs && PUBLIC_URL=/PiterJS_54 react-scripts build && mv ./build ./docs",
+    "lint": "npx eslint --fix  ./src/",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },

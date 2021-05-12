@@ -1,24 +1,29 @@
 module.exports = {
+	parser: 'babel-eslint',
 	env: {
 		node: true,
+		browser: true,
 		es6: true,
 		mocha: true,
 	},
 	extends: ['eslint:recommended'],
 	parserOptions: {
 		ecmaVersion: 2018,
+		sourceType: 'module',
 	},
 	// plugins: ['mocha', 'plugin:prettier/recommended', 'eslint-plugin-no-arrow-this'],
-	plugins: ['mocha', 'eslint-plugin-no-arrow-this'],
+	plugins: ['mocha', 'eslint-plugin-no-arrow-this', 'react'],
 	rules: {
-		'key-spacing': [
-			'warn',
-			{
-				beforeColon: true,
-				afterColon: true,
-				align: 'colon',
-			},
-		],
+        'react/jsx-uses-vars': 'error',
+        'react/jsx-uses-react': 'error',
+		// 'key-spacing': [
+		// 	'warn',
+		// 	{
+		// 		beforeColon: true,
+		// 		afterColon: true,
+		// 		align: 'colon',
+		// 	},
+		// ],
 		'linebreak-style': ['error', 'unix'],
 		quotes: ['error', 'single'],
 		semi: ['error', 'always'],
@@ -31,13 +36,13 @@ module.exports = {
 				allow: [],
 			},
 		],
-		'space-before-function-paren' : [
-			'warn', {
-				'anonymous': 'always',
-				'named': 'always',
-				'asyncArrow': 'always'
-			}
-		],
+		// 'space-before-function-paren' : [
+		// 	'warn', {
+		// 		'anonymous': 'always',
+		// 		'named': 'always',
+		// 		'asyncArrow': 'always'
+		// 	}
+		// ],
 		'prefer-template': 'warn',
 		'prefer-spread': 'warn',
 		'no-useless-concat': 'warn',

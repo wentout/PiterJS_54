@@ -80,8 +80,8 @@ progress {
 
 .Slide .Title h1 {
   font-weight: 700;
-  font-size: 17vh;
-  margin-top: 32vh;
+  font-size: 15vh;
+  margin-top: 25vh;
   color: steelblue;
 }
 
@@ -94,7 +94,7 @@ progress {
 .Slide .Title2 h1 {
   font-weight: 700;
   font-size: 12vh;
-  margin-top: 5vh;
+  margin-top: 25vh;
   color: steelblue;
 }
 
@@ -108,7 +108,7 @@ progress {
 .Slide .StarterSlide h1 {
   font-weight: 700;
   font-size: 12vh;
-  margin-top: 32vh;
+  margin-top: 37vh;
   color: slategray;
 }
 

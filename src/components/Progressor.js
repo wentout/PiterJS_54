@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {Progress} from 'theme-ui';
 
 const Progressor = function () {};

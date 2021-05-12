@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import MDX from '@mdx-js/runtime';
 import mdx from '@mdx-js/mdx';
 import Prism from '@theme-ui/prism';
@@ -6,7 +6,7 @@ import Prism from '@theme-ui/prism';
 import Chart from './Chart';
 
 // import { Box, Heading, Donut, Container, Message, Embed, Link, Badge, Grid, AspectRatio } from 'theme-ui';
-import {Box, Heading, Button} from 'theme-ui';
+import { Box, Heading, Button } from 'theme-ui';
 
 const SlideMDX = function () {
 	this.data = this.slides.current.data;
@@ -28,17 +28,17 @@ SlideMDX.prototype.View = function () {
 	const jsx = mdx.sync(data);
 
 	const app = function (proto) {
-		const key = proto.slide.key;
+		const { key } = proto.slide;
 		const split = key.split('.');
-		const data = split.reduce((answer, name) => {
-			answer = answer[name];
+		const reducedData = split.reduce((answer, keyName) => {
+			answer = answer[keyName];
 			return answer;
 		}, me);
-		return `${ data }`;
+		return `${reducedData}`;
 	};
 
 	const components = {
-		code: Prism,
+		code : Prism,
 		Heading,
 		Box,
 		app,
@@ -48,14 +48,14 @@ SlideMDX.prototype.View = function () {
 
 	const scope = {
 		jsx,
-		app: me,
-		timestamps: JSON.stringify(me.collectTimestamps(), null, '\t')
+		app        : me,
+		timestamps : JSON.stringify(me.collectTimestamps(), null, '\t')
 	};
 
 	// const MDXContent = Object.assign({}, data, { jsx });
 	const MDXContent = data;
 
-	const classNames = current.contentClassNamesWrapper ? `SlideContent ${ current.contentClassNamesWrapper }` : `SlideContent`;
+	const classNames = current.contentClassNamesWrapper ? `SlideContent ${current.contentClassNamesWrapper}` : 'SlideContent';
 
 	return (
 		<div className="MDX">

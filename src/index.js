@@ -1,6 +1,6 @@
 import {Component} from 'react-dom';
 
-import {define, defaultNamespace} from "mnemonica";
+import {define, defaultNamespace} from 'mnemonica';
 // import {define} from "mnemonica";
 
 import {Slide, Title, Title2, Starter, MDX, Footer, Progressor} from './components';

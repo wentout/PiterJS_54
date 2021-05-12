@@ -6,7 +6,7 @@ const wrapErrored = function (method) {
 		} else {
 			method();
 		}
-	}
+	};
 };
 
 
@@ -42,4 +42,4 @@ export default function () {
 	// 	app.clickNext();
 	// };
 
-};
+}

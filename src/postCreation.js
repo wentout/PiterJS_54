@@ -1,6 +1,6 @@
 
 const errorHandler = [
-	(error, inheritedInstance) => {
+	(error) => {
 		const {
 			// originalError,
 			instance
@@ -9,7 +9,7 @@ const errorHandler = [
 		instance.showRootError(`<pre>${ error }</pre>`);
 	},
 
-	(error, inheritedInstance) => {
+	(error) => {
 		const {
 			originalError,
 			instance
@@ -18,7 +18,7 @@ const errorHandler = [
 		instance.showRootError(`<pre>${ originalError.stack }</pre>`);
 	},
 
-	(error, inheritedInstance) => {
+	(error) => {
 
 		const {
 			// originalError,
@@ -50,9 +50,9 @@ const errorHandler = [
 			console.error('конструкторы error.instance в window.Chronotope');
 
 			window.ChronotopeTimeLine = {
-				[instance.constructor.name]: instance.__timestamp__,
-				[instance.parent().constructor.name]: instance.parent().__timestamp__,
-				[instance.parent().parent().constructor.name]: instance.parent().parent().__timestamp__
+				[instance.constructor.name]                   : instance.__timestamp__,
+				[instance.parent().constructor.name]          : instance.parent().__timestamp__,
+				[instance.parent().parent().constructor.name] : instance.parent().parent().__timestamp__
 			};
 
 			console.error('СТРУКТУРА наследования в window.errorInstanceTree');
@@ -63,9 +63,9 @@ const errorHandler = [
 			console.error('ПРИЧИНА ошибки window.exceptionReason');
 
 			window.Chronotope = {
-				[instance.constructor.name]: instance.constructor,
-				[instance.parent().constructor.name]: instance.parent().constructor,
-				[instance.parent().parent().constructor.name]: instance.parent().parent().constructor
+				[instance.constructor.name]                   : instance.constructor,
+				[instance.parent().constructor.name]          : instance.parent().constructor,
+				[instance.parent().parent().constructor.name] : instance.parent().parent().constructor
 			};
 
 			const names = [...new Set(collectConstructors(instance, true))];
@@ -75,9 +75,9 @@ const errorHandler = [
 			const tnr = typesNames.reverse();
 			// window.lookup4tests = lookup;
 			window.exceptionConstructors = {
-				[tnr[0]]: lookup(tnr[0]),
-				[tnr[1]]: lookup(tnr.slice(0, 2).join('.')),
-				[tnr[2]]: lookup(tnr.join('.'))
+				[tnr[0]] : lookup(tnr[0]),
+				[tnr[1]] : lookup(tnr.slice(0, 2).join('.')),
+				[tnr[2]] : lookup(tnr.join('.'))
 			};
 
 			console.error('КОНСТРУКТОРЫ : в window.exceptionConstructors');
@@ -86,34 +86,34 @@ const errorHandler = [
 
 
 		} catch (erroredInside) {
-			debugger;
+			// debugger;
 		}
 
 
 		// console.error('errored object: ', instance);
 		const strings = [];
-		strings.push(`<h1>мы можем собрать вот это :</h1>`);
+		strings.push('<h1>мы можем собрать вот это :</h1>');
 		// strings.push(`<pre>${ error }</pre>`);
 		// strings.push(`<br/><hr/><br/>`);
 		// strings.push(`<h1>да, это данные с самого слайда</h1>`);
 		// strings.push(`<h1>да, это прям сейчас извлечено из ошибки</h1>`);
 		// strings.push(`<h1>да, это воспроизводимо</h1>`);
-		strings.push(`<br/><hr/><br/>`);
-		strings.push(`<h1>1. анализ конструктора:</h1>`);
+		strings.push('<br/><hr/><br/>');
+		strings.push('<h1>1. анализ конструктора:</h1>');
 		strings.push(`<pre>instance.constructor: ${ instance.constructor.name }</pre>`);
 		strings.push(`<pre>instance.parent(): ${ instance.parent().constructor.name }</pre>`);
 		strings.push(`<pre>parent -> parent: ${ instance.parent().parent().constructor.name }\n\n</pre>`);
-		strings.push(`<h1>2. аргументы конструктора:</h1>`);
+		strings.push('<h1>2. аргументы конструктора:</h1>');
 		strings.push(`<pre>\nSlide Data: " ${ instance.data.trim() } "\n</pre>`);
 		// strings.push(`<h1>3. достаточный stack-trace:</h1>`);
 		// strings.push(`<pre>${ stack }</pre>`);
-		strings.push(`<br/><hr/><br/>`);
-		strings.push(`<h1>3. и ещё немножеско:</h1>`);
+		strings.push('<br/><hr/><br/>');
+		strings.push('<h1>3. и ещё немножеско:</h1>');
 		strings.push(`<pre>Упало в методе [ ${ methodName } ] объекта ${ applyTo.constructor.name } </pre>`);
-		strings.push(`<pre>сам метод:</pre>`);
+		strings.push('<pre>сам метод:</pre>');
 		strings.push(`<pre>${ method }</pre>`);
-		strings.push(`<br/><hr/><br/>`);
-		strings.push(`<h1>а теперь посмотрим в консоль...</h1>`);
+		strings.push('<br/><hr/><br/>');
+		strings.push('<h1>а теперь посмотрим в консоль...</h1>');
 		instance.showRootError(strings.join(''));
 	},
 
@@ -157,7 +157,7 @@ const errorHandler = [
 	// 	instance.showRootError(strings.join(''));
 	// },
 
-	(error, inheritedInstance) => {
+	(error) => {
 		const {
 			originalError,
 			instance
@@ -170,19 +170,19 @@ const errorHandler = [
 	},
 
 
-	(error, inheritedInstance) => {
+	(error) => {
 		const {
 			// originalError,
 			instance
 		} = error;
 		console.error(error);
 		const strings = [];
-		strings.push(`<h1>3. достаточный stack-trace:</h1>`);
+		strings.push('<h1>3. достаточный stack-trace:</h1>');
 		strings.push(`<pre>${ error.stack }</pre>`);
 		instance.showRootError(strings.join(''));
 	},
 
-	(error, inheritedInstance) => {
+	(error) => {
 		const {
 			originalError,
 			instance
@@ -194,7 +194,7 @@ const errorHandler = [
 		instance.showRootError(strings.join(''));
 	},
 
-	(error, inheritedInstance) => {
+	(error) => {
 		throw error;
 		// const {
 		// 	setErrored
@@ -210,13 +210,9 @@ const errorHandler = [
 export default function ({inheritedInstance}) {
 	// Object.entries(Object.getPrototypeOf(inheritedInstance)).forEach(([name, value]) => {
 
-	Object.entries(inheritedInstance).forEach(([name, value]) => {
+	Object.entries(inheritedInstance).forEach(([fieldName, value]) => {
 		if (typeof value === 'function') {
-			inheritedInstance[name] = (...args) => {
-
-				if (inheritedInstance.constructor.name === 'MDX' && inheritedInstance.failConstructorItself) {
-					debugger;
-				}
+			inheritedInstance[fieldName] = (...args) => {
 
 				try {
 					const data = value.call(inheritedInstance, ...args);
@@ -228,7 +224,7 @@ export default function ({inheritedInstance}) {
 					} = inheritedInstance.slides.current;
 					return errorHandler[errorMode || 0](error, inheritedInstance) || null;
 				}
-			}
+			};
 		}
 	});
-};
+}
